@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.orlandev.taxiapp.screens.RideScreen
 import com.orlandev.taxiapp.screens.SplashScreen
 import com.orlandev.taxiapp.ui.theme.TaxiAppTheme
 
@@ -20,26 +21,13 @@ class MainActivity : ComponentActivity() {
             TaxiAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
-                  //  Greeting("Android")
-                    SplashScreen()
+                    //  Greeting("Android")
+                    // SplashScreen()
+                    RideScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    TaxiAppTheme {
-        Greeting("Android")
     }
 }
