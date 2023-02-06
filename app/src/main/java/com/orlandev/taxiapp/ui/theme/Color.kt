@@ -4,7 +4,9 @@ import androidx.compose.ui.graphics.Color
 
 val TaxiYellow=Color(0xFFFED46C)
 val TaxiGray=Color(0xFF675B3D)
-val TaxiBlack=Color(0xFF393223)
+val TaxiDarkGray=Color(0xFF656565)
+val TaxiBlack200=Color(0xFF393223)
+val TaxiBlack=Color(0xFF1A1A1A)
 
 
 val Purple80 = Color(0xFFD0BCFF)

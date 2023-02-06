@@ -3,4 +3,5 @@
     <string name="welcome">Welcome</string>
     <string name="subtitle">At your servers</string>
     <string name="splash_message">we are here to make your trip memorable</string>
+    <string name="pickup">Pickup</string>
 </resources>

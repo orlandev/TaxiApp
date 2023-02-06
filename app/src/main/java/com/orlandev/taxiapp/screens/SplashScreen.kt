@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.orlandev.taxiapp.R
 import com.orlandev.taxiapp.ui.theme.TaxiAppTheme
-import com.orlandev.taxiapp.ui.theme.TaxiBlack
+import com.orlandev.taxiapp.ui.theme.TaxiBlack200
 import com.orlandev.taxiapp.ui.theme.TaxiGray
 import com.orlandev.taxiapp.ui.theme.TaxiYellow
 
@@ -61,7 +61,7 @@ fun SplashScreen() {
                         text = stringResource(id = R.string.welcome),
                         style = MaterialTheme.typography.displayMedium,
                         fontWeight = FontWeight.Bold,
-                        color = TaxiBlack,
+                        color = TaxiBlack200,
                         letterSpacing = 1.sp
                     )
                     Text(
