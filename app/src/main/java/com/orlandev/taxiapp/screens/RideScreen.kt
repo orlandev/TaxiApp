@@ -11,7 +11,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -32,6 +31,8 @@ import com.google.maps.android.compose.MapProperties
 import com.orlandev.taxiapp.R
 import com.orlandev.taxiapp.data.FakeRepository
 import com.orlandev.taxiapp.data.TaxiData
+import com.orlandev.taxiapp.screens.common.RatingStar
+import com.orlandev.taxiapp.screens.common.TextTitle
 import com.orlandev.taxiapp.ui.theme.*
 import com.orlandev.taxiapp.utils.darkMapStyle
 
@@ -158,34 +159,12 @@ fun SimpleCard(currentTaxiData: TaxiData, onClick: () -> Unit) {
             verticalArrangement = Arrangement.SpaceAround
         ) {
 
-            Text(
-                text = "Taxi (${currentTaxiData.type.title})",
-                fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.titleLarge
-            )
-            Row(modifier = Modifier, verticalAlignment = Alignment.CenterVertically) {
-                Text(
-                    text = "${currentTaxiData.rating}",
-                    color = TaxiYellow,
-                    fontSize = 16.sp,
-                    style = MaterialTheme.typography.labelMedium
-                )
-                Icon(
-                    modifier = Modifier.padding(start = 2.dp),
-                    imageVector = Icons.Default.Star,
-                    contentDescription = null,
-                    tint = TaxiYellow
-                )
-
+            TextTitle(
+                title = "Taxi (${currentTaxiData.type.title})",
+                subtitle = "Will be arrived in 15min."
+            ) {
+                RatingStar(rating = currentTaxiData.rating)
             }
-            Text(
-                text = "Will be arrived in 15min.",
-                maxLines = 2,
-                modifier = Modifier.width(120.dp),
-                style = MaterialTheme.typography.labelLarge,
-                letterSpacing = 1.sp,
-                color = Color.White.copy(alpha = 0.6f),
-            )
 
             Text(
                 text = "${currentTaxiData.price}$/1mi",
@@ -196,6 +175,7 @@ fun SimpleCard(currentTaxiData: TaxiData, onClick: () -> Unit) {
         }
     }
 }
+
 
 @Composable
 fun DestinySelection() {

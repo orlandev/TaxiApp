@@ -9,6 +9,7 @@ sealed class TaxiType(@DrawableRes val taxiIcon: Int, val title: String) {
 }
 
 data class TaxiData(
+    val id: Int,
     val type: TaxiType,
     val rating: Double,
     val price: Int,

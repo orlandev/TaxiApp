@@ -8,6 +8,7 @@ class FakeRepository {
     fun getAllTaxiData(): List<TaxiData> {
         return listOf(
             TaxiData(
+                id = 0,
                 type = TaxiType.Basic,
                 distance = Random.nextInt(0, 100),
                 price = Random.nextInt(10, 100),
@@ -15,6 +16,7 @@ class FakeRepository {
             ),
 
             TaxiData(
+                id = 1,
                 type = TaxiType.Lux,
                 distance = Random.nextInt(0, 100),
                 price = Random.nextInt(10, 100),
@@ -22,6 +24,7 @@ class FakeRepository {
             ),
 
             TaxiData(
+                id = 2,
                 type = TaxiType.Basic,
                 distance = Random.nextInt(0, 100),
                 price = Random.nextInt(10, 100),
@@ -29,6 +32,7 @@ class FakeRepository {
             ),
 
             TaxiData(
+                id = 3,
                 type = TaxiType.Basic,
                 distance = Random.nextInt(0, 100),
                 price = Random.nextInt(10, 100),
@@ -36,6 +40,7 @@ class FakeRepository {
             ),
 
             TaxiData(
+                id = 4,
                 type = TaxiType.Lux,
                 distance = Random.nextInt(0, 100),
                 price = Random.nextInt(10, 100),

@@ -4,4 +4,5 @@
     <string name="subtitle">At your servers</string>
     <string name="splash_message">we are here to make your trip memorable</string>
     <string name="pickup">Pickup</string>
+    <string name="booking_title_screen">Book Now</string>
 </resources>

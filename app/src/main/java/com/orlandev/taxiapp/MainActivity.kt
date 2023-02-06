@@ -6,12 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.orlandev.taxiapp.screens.RideScreen
-import com.orlandev.taxiapp.screens.SplashScreen
+import com.orlandev.taxiapp.data.FakeRepository
+import com.orlandev.taxiapp.screens.BookingScreen
 import com.orlandev.taxiapp.ui.theme.TaxiAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +22,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //  Greeting("Android")
                     // SplashScreen()
-                    RideScreen()
+                    //RideScreen()
+                    //Solo para probar
+                    val fakeRepository = FakeRepository()
+                    //El error esta en que nunca son los mismos
+                    //Ups
+                    BookingScreen(fakeRepository.getAllTaxiData().first().id)
                 }
             }
         }
